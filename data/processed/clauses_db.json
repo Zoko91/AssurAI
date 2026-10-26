@@ -1,0 +1,267 @@
+[
+  {
+    "clause_id": "CG-HAB-2026-LU-1.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 1.1",
+    "title": "Définition des bâtiments et locaux garantis",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "DEFINITION",
+    "locations": [
+      "local_collectif",
+      "garage",
+      "local_velo",
+      "parties_communes",
+      "cave",
+      "dependance",
+      "logement_privatif"
+    ],
+    "mandatory_conditions": [
+      "verrouillage_a_cle"
+    ],
+    "explicit_exclusions": [],
+    "raw_text": "Article 1.1 - Définition des bâtiments et locaux garantis\nSont garantis les bâtiments d'habitation situés à l'adresse indiquée aux Dispositions Particulières :\n- Les pièces d'habitation principales et secondaires à usage exclusif de l'assuré ;\n- Les dépendances privatives fermées situées à la même adresse (caves privatives, garages privatifs individuels fermés à clé) ;\n- Sont exclues de la définition des locaux privatifs les parties communes des immeubles collectifs (halls d'entrée, couloirs, cages d'escalier, cours intérieures, locaux à poubelles et locaux collectifs à vélos ou poussettes), qui relèvent de l'usage partagé de la copropriété."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-1.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 1.2",
+    "title": "Définition des biens mobiliers garantis",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "DEFINITION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 1.2 - Définition des biens mobiliers garantis\nPar \"Contenu\" ou \"Biens mobiliers\", on entend l'ensemble des meubles meublants, effets personnels, objets d'usage courant, matériel informatique, électroménager et cycles appartenant à l'assuré ou aux membres de son foyer fiscal vivant sous le même toit."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-1.3",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 1.3",
+    "title": "Mobilier et installations extérieures",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "exterieur"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 1.3 - Mobilier et installations extérieures\nLes biens mobiliers situés à l'extérieur des bâtiments fermés (dans les cours, jardins, terrasses ouvertes ou balcons) ne sont garantis qu'au titre des extensions expresses \"Jardin et Aménagements Extérieurs\" expressément souscrites aux Dispositions Particulières. En l'absence de cette mention, les biens situés en plein air sont exclus des garanties de base du contrat."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-2.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 2.1",
+    "title": "Définition de l'incendie garanti",
+    "guarantee": "INCENDIE_ET_ASSIMILES",
+    "clause_type": "DEFINITION",
+    "locations": [],
+    "mandatory_conditions": [
+      "combustion_flamme_vive"
+    ],
+    "explicit_exclusions": [],
+    "raw_text": "Article 2.1 - Définition de l'incendie garanti\nAu sens du présent contrat, l'incendie s'entend exclusivement d'une combustion avec flammes vives, susceptible de se propager d'elle-même, prenant naissance ou se développant en dehors d'un foyer normal ou s'en étant échappée.\nSont également pris en charge les dommages résultant de l'explosion, de l'implosion et de la chute directe de la foudre."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-2.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 2.2",
+    "title": "Exclusions expresses relatives à la chaleur et au feu",
+    "guarantee": "INCENDIE_ET_ASSIMILES",
+    "clause_type": "EXCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "action_seule_chaleur_sans_flamme",
+      "fonte_degradation_par_source_chaleur_sans_incendie"
+    ],
+    "raw_text": "Article 2.2 - Exclusions expresses relatives à la chaleur et au feu\nSont formellement exclus de la garantie Incendie :\na) Les dommages causés par la seule action de la chaleur, du rayonnement thermique, de la canicule ou du soleil, sans qu'il y ait eu combustion vive ou naissance d'un incendie caractérisé ;\nb) La détérioration, la fonte, la déformation ou le roussissement d'objets ou de meubles causés par leur exposition directe ou prolongée à une source de chaleur, à une bougie, à un fer à repasser, à un barbecue ou à un appareil de chauffage, dès lors que cet événement ne s'est pas accompagné d'un incendie propagé ;\nc) Les accidents de fumeurs (brûlures causées par des cigarettes, cigares ou pipes) n'ayant pas provoqué d'embrasement du bien ;\nd) Les brûlures et dégradations subies par les récipients et ustensiles de cuisson ainsi que les appareils de chauffage eux-mêmes par leur propre fonctionnement."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-2.3",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 2.3",
+    "title": "Dommages matériels au mobilier d'extérieur suite à incendie",
+    "guarantee": "INCENDIE_ET_ASSIMILES",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "exterieur"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 2.3 - Dommages matériels au mobilier d'extérieur suite à incendie\nSous réserve de la souscription de l'option \"Mobilier de jardin\", le mobilier de jardin (tables, chaises, parasols) est garanti contre l'incendie uniquement si le dommage résulte d'un incendie avéré s'étant propagé à la terrasse ou au jardin. Les altérations dues aux conditions climatiques ou à la fusion thermique d'éléments posés sur le mobilier sont totalement exclues."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-3.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 3.1",
+    "title": "Circonstances d'application de la garantie Vol",
+    "guarantee": "VOL_ET_VANDALISME",
+    "clause_type": "CONDITION_APPLICATION",
+    "locations": [
+      "cave",
+      "exterieur",
+      "garage",
+      "terrasse",
+      "dependance",
+      "jardin"
+    ],
+    "mandatory_conditions": [
+      "effraction_caracterisee"
+    ],
+    "explicit_exclusions": [],
+    "raw_text": "Article 3.1 - Circonstances d'application de la garantie Vol\nLa garantie Vol s'applique lorsque le vol ou la tentative de vol est commis à l'intérieur des locaux d'habitation et dépendances privatives, exclusivement selon l'un des modes opératoires suivants dûment prouvés par l'assuré :\n1. Par effraction constatée des fermetures extérieures des locaux assurés (portes, fenêtres, serrures fracturées, bris d'accès) ;\n2. Par escalade des murs ou clôtures extérieures régulières, suivie d'une pénétration dans les locaux d'habitation ;\n3. Par usage de fausses clés ou de clés volées (sous réserve d'un dépôt de plainte spécifique pour vol de clés avec agression ou effraction) ;\n4. Avec violences corporelles ou menaces graves sur la personne de l'assuré."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-3.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 3.2",
+    "title": "Exigences impératives de fermeture et de verrouillage",
+    "guarantee": "VOL_ET_VANDALISME",
+    "clause_type": "CONDITION_APPLICATION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "logement_privatif",
+      "exterieur"
+    ],
+    "mandatory_conditions": [
+      "verrouillage_a_cle"
+    ],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 3.2 - Exigences impératives de fermeture et de verrouillage\nPour être couvert au titre de la garantie Vol, l'ensemble des ouvertures extérieures donnant accès aux locaux privatifs doit être impérativement fermé et verrouillé à clé lors de toute absence, même de courte durée.\nTout vol commis dans un local privatif dont la porte ou les issues d'accès ont été laissées ouvertes, non verrouillées ou simplement claquées sans tour de clé est formellement exclu de toute indemnisation."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-3.3",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 3.3",
+    "title": "Biens entreposés dans les parties communes et locaux collectifs",
+    "guarantee": "VOL_ET_VANDALISME",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "local_velo",
+      "parties_communes",
+      "local_collectif"
+    ],
+    "mandatory_conditions": [
+      "effraction_caracterisee",
+      "verrouillage_a_cle",
+      "antivol_point_fixe"
+    ],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 3.3 - Biens entreposés dans les parties communes et locaux collectifs\nS'agissant des biens mobiliers (notamment vélos, trottinettes non motorisées, poussettes) déposés dans les locaux collectifs ou parties communes d'un immeuble en copropriété (tels que le local à vélos commun de l'immeuble) :\n- La couverture n'est acquise que si deux conditions cumulatives strictes sont réunies :\n  1° Le local commun était muni d'une porte d'accès fermée à clé et le vol a été commis avec effraction caractérisée des serrures ou fermetures de ce local commun (portant des traces matérielles visibles de forcement constatées par procès-verbal) ;\n  2° Le cycle ou bien garanti était lui-même relié et cadenassé par un antivol de sécurité homologué à un point d'ancrage fixe et inamovible scellé dans le sol ou la maçonnerie du bâtiment.\n- Sont expressément exclus de la garantie :\n  - Tout vol commis dans un local collectif laissé ouvert, accessible à tous les résidents ou tiers sans clé, ou dont la porte d'accès n'était pas fermée à clé au moment des faits ;\n  - Tout vol commis dans les couloirs, halls d'entrée, cours communes ou cages d'escalier de l'immeuble ;\n  - Tout vol d'un cycle qui n'était pas attaché à un point fixe à l'intérieur dudit local commun."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-3.4",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 3.4",
+    "title": "Vol de bicyclettes et engins de mobilité douce à l'extérieur",
+    "guarantee": "VOL_ET_VANDALISME",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "logement_privatif",
+      "local_velo",
+      "parties_communes",
+      "local_collectif"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert",
+      "exterieur_hors_batiments_sans_option"
+    ],
+    "raw_text": "Article 3.4 - Vol de bicyclettes et engins de mobilité douce à l'extérieur\nLe vol de cycles sur la voie publique ou hors des bâtiments n'est couvert qu'en cas de souscription de l'option spécifique \"Mobilité Douce / Vol en tous lieux\". En l'absence de cette clause expresse, aucun vol commis en dehors des locaux privatifs ou du local commun sécurisé n'est indemnisable."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-4.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 4.1",
+    "title": "Événements couverts",
+    "guarantee": "DEGATS_DES_EAUX",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "exterieur"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 4.1 - Événements couverts\nSont couverts les dommages matériels directs occasionnés aux biens assurés par l'action de l'eau, provenant exclusivement de :\n- Fuites, ruptures ou débordements de conduites non enterrées d'adduction d'eau ou d'évacuation ;\n- Débordements d'appareils à effet d'eau (lave-linge, lave-vaisselle, chauffe-eau) ou d'appareils sanitaires ;\n- Infiltrations accidentelles d'eau pluviale à travers les toitures et terrasses."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-4.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 4.2",
+    "title": "Exclusions dégâts des eaux",
+    "guarantee": "DEGATS_DES_EAUX",
+    "clause_type": "EXCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 4.2 - Exclusions dégâts des eaux\nNe sont pas garantis :\n- Les infiltrations d'eau par les ouvertures (portes, fenêtres, velux) laissées ouvertes ou non fermées hermétiquement lors d'épisodes pluvieux ;\n- Les frais de réparation ou de remplacement des canalisations, appareils ou toitures à l'origine du sinistre (seuls les dégâts causés par l'eau sont indemnisés) ;\n- L'humidité continue due au défaut d'aération ou à la condensation récurrente."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-5.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 5.1",
+    "title": "Objet de la garantie Responsabilité Civile",
+    "guarantee": "RESPONSABILITE_CIVILE",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 5.1 - Objet de la garantie Responsabilité Civile\nLa compagnie garantit les conséquences pécuniaires de la responsabilité civile encourue par l'assuré ou les membres de son foyer en raison des dommages corporels, matériels ou immatériels causés involontairement à des tiers au cours de leur vie privée."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-5.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 5.2",
+    "title": "Exclusions responsabilité civile",
+    "guarantee": "RESPONSABILITE_CIVILE",
+    "clause_type": "EXCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "acte_intentionnel"
+    ],
+    "raw_text": "Article 5.2 - Exclusions responsabilité civile\nSont exclus de la garantie :\n- Les dommages causés intentionnellement par l'assuré ;\n- Les dommages relevant de l'utilisation de véhicules terrestres à moteur soumis à obligation légale d'assurance automobile ;\n- Les dommages causés aux biens appartenant à l'assuré lui-même ou confiés sous sa garde contractuelle."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-6.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 6.1",
+    "title": "Charge de la preuve et déclaration du sinistre",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [
+      "effraction_caracterisee"
+    ],
+    "explicit_exclusions": [],
+    "raw_text": "Article 6.1 - Charge de la preuve et déclaration du sinistre\nL'assuré doit déclarer tout sinistre dans un délai maximal de 5 jours ouvrés (porté à 2 jours ouvrés en cas de vol). Il appartient à l'assuré d'apporter la preuve de la réalité de l'événement et du respect des conditions de sécurité requises par le contrat (dépôt de plainte, constat d'effraction, factures justificatives)."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-6.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 6.2",
+    "title": "Déclarations incomplètes et cas d'incertitude contractuelle",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 6.2 - Déclarations incomplètes et cas d'incertitude contractuelle\nEn cas de circonstances indéterminées ou de silence partiel du contrat sur une modalité spécifique non stipulée expressément, la prise en charge fait l'objet d'un examen contradictoire par le gestionnaire. L'absence de justification matérielle d'une circonstance obligatoire (ex: fermeture à clé d'un local) vaut présomption de non-conformité aux exigences de garantie."
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "claim_id": "CAS-HAB-01",
+    "title": "Vol de vélo dans local commun non fermé à clé",
+    "description": "Je me fais voler mon vélo dans le local commun de l'immeuble, qui n'était pas fermé à clé. Suis-je couvert ?",
+    "target_guarantee": "VOL_ET_VANDALISME",
+    "location": "local_velo_commun",
+    "metadata": {
+      "object": "velo",
+      "location_type": "local_collectif_commun",
+      "door_locked": false,
+      "break_in_marks": false,
+      "fixed_anchor_lock": false
+    },
+    "expected_verdict": "NON_COUVERT",
+    "expected_clauses": [
+      "Article 3.3",
+      "Article 1.1"
+    ],
+    "ground_truth_reasoning": "Le vol est formellement exclu en vertu de l'Article 3.3. Deux conditions cumulatives d'indemnisation faisaient défaut : 1° le local commun n'était pas fermé à clé et ne présentait aucune effraction matérielle ; 2° le vélo n'était pas cadenassé à un point d'ancrage fixe. De plus, l'Article 3.3 stipule expressément que tout vol commis dans un local collectif laissé ouvert ou non fermé à clé au moment des faits est exclu de garantie."
+  },
+  {
+    "claim_id": "CAS-HAB-02",
+    "title": "Bougie fondue sur table de jardin par temps chaud",
+    "description": "Un assuré laisse une bougie sur la table de son jardin pendant ses vacances. Avec la chaleur, la bougie fond et abîme la table. Est-ce couvert ?",
+    "target_guarantee": "INCENDIE_ET_ASSIMILES",
+    "location": "jardin_exterieur",
+    "metadata": {
+      "object": "table_jardin",
+      "source_of_damage": "fonte_bougie_chaleur_solaire",
+      "open_flame_present": false,
+      "fire_spread": false,
+      "outdoor": true
+    },
+    "expected_verdict": "NON_COUVERT",
+    "expected_clauses": [
+      "Article 2.1",
+      "Article 2.2",
+      "Article 1.3"
+    ],
+    "ground_truth_reasoning": "Le sinistre n'est pas couvert. D'une part, l'Article 2.1 définit l'incendie comme une combustion avec flammes vives s'étant propagée, ce qui n'est pas le cas ici. D'autre part, l'Article 2.2 exclut formellement : (a) les dommages résultant de la seule action de la chaleur ou du soleil sans combustion vive, et (b) la détérioration ou la fonte d'objets causée par une bougie sans incendie propagé. Enfin, les biens situés en plein air sont exclus des garanties de base selon l'Article 1.3."
+  },
+  {
+    "claim_id": "CTRL-CAS-03",
+    "title": "Cambriolage avec effraction dans logement privatif verrouillé",
+    "description": "Pendant notre absence le week-end, la porte d'entrée de notre appartement a été fracturée (serrure forcée au pied-de-biche) et la télévision ainsi que des bijoux ont été dérobés.",
+    "target_guarantee": "VOL_ET_VANDALISME",
+    "location": "logement_privatif",
+    "metadata": {
+      "object": "television_bijoux",
+      "location_type": "logement_privatif",
+      "door_locked": true,
+      "break_in_marks": true
+    },
+    "expected_verdict": "COUVERT",
+    "expected_clauses": [
+      "Article 3.1",
+      "Article 3.2"
+    ],
+    "ground_truth_reasoning": "Sinistre intégralement couvert au titre de l'Article 3.1 (vol commis par effraction constatée des fermetures extérieures des locaux assurés) et conforme aux exigences de verrouillage de l'Article 3.2."
+  },
+  {
+    "claim_id": "CTRL-CAS-04",
+    "title": "Vol de vélo sur la voie publique attaché à un poteau",
+    "description": "J'ai stationné mon vélo en ville attaché avec un antivol à un poteau dans la rue pendant que je faisais des courses. À mon retour, l'antivol avait été scié et le vélo avait disparu.",
+    "target_guarantee": "VOL_ET_VANDALISME",
+    "location": "voie_publique",
+    "metadata": {
+      "object": "velo",
+      "location_type": "voie_publique",
+      "option_mobilite_douce": false
+    },
+    "expected_verdict": "NON_COUVERT",
+    "expected_clauses": [
+      "Article 3.4"
+    ],
+    "ground_truth_reasoning": "Non couvert au titre du contrat de base. L'Article 3.4 exclut tout vol de cycles sur la voie publique en l'absence de souscription expresse de l'option spécifique 'Mobilité Douce / Vol en tous lieux'."
+  },
+  {
+    "claim_id": "CTRL-CAS-05",
+    "title": "Dégât des eaux par rupture soudaine d'un flexible sous évier",
+    "description": "Le flexible d'alimentation d'eau froide sous l'évier de la cuisine a rompu subitement dans la nuit, provoquant une inondation et dégradant le parquet du salon.",
+    "target_guarantee": "DEGATS_DES_EAUX",
+    "location": "logement_privatif",
+    "metadata": {
+      "cause": "rupture_flexible_adduction",
+      "location_type": "cuisine_salon"
+    },
+    "expected_verdict": "COUVERT",
+    "expected_clauses": [
+      "Article 4.1"
+    ],
+    "ground_truth_reasoning": "Couvert au titre de l'Article 4.1 : dommages matériels directs occasionnés par des fuites ou ruptures de conduites non enterrées d'adduction d'eau."
+  },
+  {
+    "claim_id": "CTRL-CAS-06",
+    "title": "Infiltration pluviale par fenêtre de toit laissée ouverte",
+    "description": "Lors d'un orage violent, l'eau de pluie est entrée par la fenêtre de toit (Velux) laissée en position entrouverte par l'assuré, abîmant la moquette.",
+    "target_guarantee": "DEGATS_DES_EAUX",
+    "location": "chambre_combles",
+    "metadata": {
+      "cause": "pluie_par_fenetre_ouverte",
+      "window_open": true
+    },
+    "expected_verdict": "NON_COUVERT",
+    "expected_clauses": [
+      "Article 4.2"
+    ],
+    "ground_truth_reasoning": "Exclu en vertu de l'Article 4.2 (exclusions dégâts des eaux) qui exclut formellement les infiltrations d'eau par les ouvertures (portes, fenêtres, velux) laissées ouvertes ou non hermétiquement fermées."
+  },
+  {
+    "claim_id": "CTRL-CAS-07",
+    "title": "Enfant brisant accidentellement la baie vitrée du voisin",
+    "description": "Mon fils de 10 ans jouait au ballon dans notre jardin et le ballon a atterri dans la baie vitrée de la maison du voisin, qui s'est brisée.",
+    "target_guarantee": "RESPONSABILITE_CIVILE",
+    "location": "voisinage",
+    "metadata": {
+      "actor": "enfant_mineur_famille",
+      "victim": "tiers_voisin",
+      "intentional": false
+    },
+    "expected_verdict": "COUVERT",
+    "expected_clauses": [
+      "Article 5.1"
+    ],
+    "ground_truth_reasoning": "Couvert au titre de l'Article 5.1 (Responsabilité Civile Vie Privée) : réparation des dommages matériels causés involontairement à un tiers par un membre du foyer fiscal."
+  },
+  {
+    "claim_id": "CTRL-CAS-08",
+    "title": "Fissuration du salon de jardin par intempéries sans précision d'options",
+    "description": "Notre table de jardin en teck s'est fendue après une série d'orages et de fortes amplitudes thermiques. Nous n'avons pas notre tableau d'options particulières sous la main.",
+    "target_guarantee": "AMENAGEMENTS_EXTERIEURS",
+    "location": "jardin_exterieur",
+    "metadata": {
+      "object": "table_jardin",
+      "cause": "intemperies_thermiques",
+      "particular_conditions_available": false
+    },
+    "expected_verdict": "AMBIGU_A_VERIFIER",
+    "expected_clauses": [
+      "Article 1.3",
+      "Article 6.2"
+    ],
+    "ground_truth_reasoning": "Statut Ambigu / À vérifier. Selon l'Article 1.3, le mobilier extérieur est exclu par défaut sauf souscription expresse de l'option 'Jardin et Aménagements Extérieurs' aux Dispositions Particulières. L'Article 6.2 impose la vérification contradictoire des pièces contractuelles de l'assuré avant tout rejet ou acceptation définitive."
+  }
+]
