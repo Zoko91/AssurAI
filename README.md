@@ -68,10 +68,15 @@ Cette section decrit strictement les briques developpees et actives dans le code
 - **Parsing relationnel (`src/parser.py`) :** Rejet du chunking arbitraire par blocs de texte. Chaque article est decoupe en unite atomique selon le modele Pydantic strict `ContractClause` (`src/schemas.py`), extrayant la reference d'article, la garantie, les lieux d'application, les conditions suspensives et les exclusions formelles.
 - **Enrichissement semantique avant embedding :** Chaque clause est projetee via un gabarit contextuel enrichi associant titre, garantie, conditions et exclusions au texte juridique.
 
-### 2. Retrieval Hybride en Memoire et RRF
-- **Recherche Dense :** Encodage et normalisation des vecteurs ($L_2$ norm = 1.0) avec calcul direct par produit scalaire en memoire. Sur la taille du corpus (40 clauses atomiques couvrant l'ensemble de la police MRH), la similarite s'execute en moins de 1 milliseconde sans perte de rappel.
-- **Recherche Sparse avec Stemming Francais :** Algorithme de reduction morphologique eliminant les mots vides et gerant les accords singulier/pluriel (*velo* / *velos*, *porte* / *portes*).
-- **Fusion RRF :** Combinaison des rangs dense et sparse selon la formule standard $k=60$ pour eviter la dilution des termes juridiques critiques.
+### 2. Retrieval Hybride et Reranking Haute Precision (F2LLM)
+- **Etape 1 - Retrieval Hybride (Dense + Sparse avec RRF) :**
+  - **Recherche Dense :** [Embedding Gemma 2](https://huggingface.co/mlx-community/embeddinggemma-2-bf16) pour capter la proximite semantique globale.
+  - **Recherche Sparse avec Stemming Francais :** Algorithme de reduction morphologique eliminant les mots vides et gerant les accords singulier/pluriel (*velo* / *velos*, *porte* / *portes*).
+  - **Fusion RRF ($k=60$) :** Combinaison des rangs dense et sparse pour extraire un premier pool de **10 clauses candidates**.
+- **Etape 2 - Reranking Haute Precision (F2LLM-v2-4B MLX 8-bit) :**
+  - Modele issu du [Leaderboard MTEB Reranking](https://huggingface.co/spaces/mteb/leaderboard) execute nativement en 8-bit sous MLX.
+  - Re-classement par attention croisee des 10 clauses candidates a l'aide d'un prompt d'instruction dedie, permettant d'isoler les nuances juridiques critiques (ex: distinction entre parties communes et logement privatif).
+  - Selection du **Top 3** definitif transmis au modele de generation.
 
 ### 3. Couche 0 : Guardrail Deterministe d'Exclusion
 - Un filtre logique intercepte les manquements formels avant generation libre du LLM (ex: absence de verrouillage, local collectif laisse ouvert, source de chaleur sans flammes vives).
@@ -80,8 +85,8 @@ Cette section decrit strictement les briques developpees et actives dans le code
 
 ### 4. Stack de Modeles Locaux Utilisee
 - **LLM :** [Qwen 3.5 9B MLX 4-bit](https://huggingface.co/mlx-community/Qwen3.5-9B-MLX-4bit) execute localement sur Apple Silicon avec environ 5 Go de memoire unifiee.
-- **Bi-Encoder :** [Embedding Gemma 2](https://huggingface.co/mlx-community/embeddinggemma-2-bf16) utilise pour la projection dense des requetes et des clauses.
-- **Reranker :** [F2LLM-v2-4B-mlx-8bit](https://huggingface.co/fcmeyer/F2LLM-v2-4B-mlx-8bit) issu du [Leaderboard MTEB Reranking](https://huggingface.co/spaces/mteb/leaderboard) pour le re-classement des extraits.
+- **Bi-Encoder Dense :** [Embedding Gemma 2](https://huggingface.co/mlx-community/embeddinggemma-2-bf16) utilise pour la projection dense des requetes et des clauses.
+- **Reranker :** [F2LLM-v2-4B-mlx-8bit](https://huggingface.co/fcmeyer/F2LLM-v2-4B-mlx-8bit) pour le re-classement haute precision par attention croisee.
 - **Validation continue :** Suite de 15 tests unitaires automatiques sous `pytest` (`tests/`) validant l'integrite des donnees et les cas limites d'exclusions.
 
 ---
@@ -105,15 +110,19 @@ flowchart LR
 - **PQ (Product Quantization) :** Decoupage d'un vecteur de 1024 flottants (4096 octets) en $M=64$ sous-vecteurs quantifies sur 256 centroides (compression d'un facteur 64, ramenant le vecteur a 64 octets).
 - **ADC (Asymmetric Distance Computation) :** Calcul par table de correspondance precalculee en memoire sans decompresser les vecteurs du corpus.
 
-### 2. Fine-Tuning Contrastif (CachedMNRL / GradCache)
+### 2. Modele Sparse Neuronal Appris (SPLADE / BGM)
+- Remplacement du ranker lexical algorithmique par un modele sparse entraine de type **SPLADE** (*Sparse Lexical and Expansion Model*).
+- Contrairement au simple comptage heuristique de racines lexicales (stemming), un modele sparse neuronal projette les declarations dans l'espace de vocabulaire avec des poids appris, realisant une expansion lexicale automatique pour capturer les synonymes et le jargon assurantiel implicite sans regles manuelles.
+
+### 3. Fine-Tuning Contrastif (CachedMNRL / GradCache)
 - Entrainement du bi-encodeur sur triplets `(Requete, Clause pertinente, Hard Negative)` via la fonction de perte Multiple Negatives Ranking Loss.
 - Utilisation de GradCache pour simuler de grands batchs (16 000 paires) en memoire GPU sans saturation.
 - *Raison de non-implementation sur le POC :* Risque eleve de surapprentissage et d'effondrement catastrophique de l'espace vectoriel (*catastrophic forgetting*) en l'absence d'une base massive de paires verifiees.
 
-### 3. Graphe de Similarite et Resolution d'Entites (2-Hop Traversal)
+### 4. Graphe de Similarite et Resolution d'Entites (2-Hop Traversal)
 - Construction d'un graphe de clauses pour relier les garanties par transitivite topologique et detecter les equivalences de clauses entre polices d'assurance distinctes.
 
-### 4. Tete de Decision Calibree et Observabilite MLOps
+### 5. Tete de Decision Calibree et Observabilite MLOps
 - Remplacement de la generation libre par un classifieur optimise par **Perte de Brier** et **RLCD** (*Reinforcement Learning for Calibrated Decisions*) pour sanctionner les erreurs formulees avec un niveau de certitude eleve.
 - **Surveillance de la derive (Drift) :** Calcul continu du **Population Stability Index (PSI)** et du test de **Kolmogorov-Smirnov**, avec ponderation des alertes par les valeurs d'attribution **TreeSHAP** pour ne surveiller que les variables influencant la prise de decision.
 

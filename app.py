@@ -85,7 +85,7 @@ for msg in st.session_state.messages:
                     for src in data["retrieved_clauses"]:
                         st.markdown(f"""
                         <div class="source-box">
-                            <div class="source-title">{src['article']} — {src['title']} (Garantie : {src['guarantee']})</div>
+                            <div class="source-title">{src['article']} — {src['title']} (Garantie : {src['guarantee']} | Reranker : {src.get('rerank_score', 'N/A')})</div>
                             <div class="source-quote">{src['raw_text']}</div>
                         </div>
                         """, unsafe_allow_html=True)
@@ -117,7 +117,7 @@ if query_to_process:
                 for src in result["retrieved_clauses"]:
                     st.markdown(f"""
                     <div class="source-box">
-                        <div class="source-title">{src['article']} — {src['title']} (Garantie : {src['guarantee']})</div>
+                        <div class="source-title">{src['article']} — {src['title']} (Garantie : {src['guarantee']} | Reranker : {src.get('rerank_score', 'N/A')})</div>
                         <div class="source-quote">{src['raw_text']}</div>
                     </div>
                     """, unsafe_allow_html=True)

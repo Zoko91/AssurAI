@@ -58,6 +58,16 @@ class RealtimeRAGPipeline:
             self.llm_model, self.llm_tokenizer = mlx_lm.load(llm_model_name)
         except Exception:
             self.llm_model, self.llm_tokenizer = mlx_lm.load("mlx-community/Qwen2.5-3B-Instruct-4bit")
+
+        # 3. Chargement du Reranker F2LLM (MLX 8-bit, MTEB Leaderboard)
+        try:
+            import mlx_embeddings
+            self.reranker_model, self.reranker_tokenizer = mlx_embeddings.load(reranker_model_name)
+            self.has_reranker = True
+        except Exception:
+            self.reranker_model = None
+            self.reranker_tokenizer = None
+            self.has_reranker = False
         
         # Chargement des clauses structurées
         raw_clauses = json.loads(self.db_path.read_text(encoding="utf-8"))
@@ -73,6 +83,23 @@ class RealtimeRAGPipeline:
         self.clause_embeddings = self.embedding_model.encode(
             self.clause_texts, convert_to_numpy=True, normalize_embeddings=True
         )
+
+        # Cache d'embeddings F2LLM pour le Reranking instantané
+        f2llm_cache_path = self.db_path.parent / "f2llm_clause_embeddings.npy"
+        if self.has_reranker:
+            if f2llm_cache_path.exists():
+                self.f2llm_clause_embeddings = np.load(f2llm_cache_path)
+            else:
+                import mlx.core as mx
+                import mlx_embeddings
+                embs = mlx_embeddings.generate(
+                    self.reranker_model, self.reranker_tokenizer, texts=self.clause_texts, max_length=512
+                ).text_embeds
+                f2_np = np.array(embs.astype(mx.float32))
+                self.f2llm_clause_embeddings = f2_np / np.linalg.norm(f2_np, axis=1, keepdims=True)
+                np.save(f2llm_cache_path, self.f2llm_clause_embeddings)
+        else:
+            self.f2llm_clause_embeddings = None
 
     def _detect_deterministic_exclusion(self, question: str) -> Optional[Tuple[str, str, str]]:
         """
@@ -165,22 +192,52 @@ class RealtimeRAGPipeline:
             r_sparse = sparse_rank_map[idx]
             rrf_scores[idx] = (1.0 / (k_rrf + r_dense)) + (1.0 / (k_rrf + r_sparse))
 
-        top_indices = np.argsort(rrf_scores)[::-1][:top_k]
-        
+        # Étape 1 : Présélection large (Top 10 clauses candidates) via RRF
+        candidate_pool_size = min(10, len(self.clauses))
+        candidate_indices = np.argsort(rrf_scores)[::-1][:candidate_pool_size].tolist()
+
+        # Étape 2 : Reranker Cross-Attention (F2LLM-v2-4B 8-bit)
+        rerank_scores_map = {}
+        if self.has_reranker and self.f2llm_clause_embeddings is not None:
+            try:
+                import mlx.core as mx
+                import mlx_embeddings
+                query_prompt = f"Instruct: Given a question, retrieve passages that can help answer the question.\nQuery: {question}"
+                q_f2_emb = mlx_embeddings.generate(
+                    self.reranker_model, self.reranker_tokenizer, texts=[query_prompt], max_length=512
+                ).text_embeds
+                q_f2_np = np.array(q_f2_emb.astype(mx.float32))[0]
+                q_f2_norm = q_f2_np / (np.linalg.norm(q_f2_np) + 1e-8)
+
+                cand_embs = self.f2llm_clause_embeddings[candidate_indices]
+                f2_scores = np.dot(cand_embs, q_f2_norm)
+
+                for idx, sc in zip(candidate_indices, f2_scores):
+                    rerank_scores_map[idx] = float(sc)
+
+                # Re-classement par le Reranker F2LLM
+                sorted_candidates = sorted(candidate_indices, key=lambda idx: rerank_scores_map[idx], reverse=True)
+                top_indices = sorted_candidates[:top_k]
+            except Exception:
+                top_indices = candidate_indices[:top_k]
+        else:
+            top_indices = candidate_indices[:top_k]
+
         top_candidates = []
         for idx in top_indices:
             clause = self.clauses[idx]
             dense_s = float(cosine_scores[idx])
             sparse_s = float(sparse_scores[idx])
             rrf_s = float(rrf_scores[idx])
-            top_candidates.append((rrf_s, clause, dense_s, sparse_s))
+            rerank_s = rerank_scores_map.get(idx, dense_s)
+            top_candidates.append((rrf_s, clause, dense_s, sparse_s, rerank_s))
 
         # Si une exclusion formelle est active, placer obligatoirement sa clause en Source n°1
         if exclusion_detected:
             exc_art = exclusion_detected[0]
             exc_clause = next((c for c in self.clauses if c.article_num == exc_art), None)
             if exc_clause:
-                top_candidates = [(1.0, exc_clause, 0.95, 10.0)] + [
+                top_candidates = [(1.0, exc_clause, 0.95, 10.0, 0.99)] + [
                     tc for tc in top_candidates if tc[1].article_num != exc_art
                 ][:top_k - 1]
 
@@ -237,6 +294,13 @@ class RealtimeRAGPipeline:
 
         messages = [{"role": "user", "content": prompt}]
         formatted = self.llm_tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+        
+        # Sécurisation multi-threading MLX pour les threads de travail Streamlit
+        import sys
+        if "mlx_lm.generate" in sys.modules:
+            import mlx.core as mx
+            sys.modules["mlx_lm.generate"].generation_stream = mx.new_stream(mx.default_device())
+
         llm_response = mlx_lm.generate(
             self.llm_model, self.llm_tokenizer, prompt=formatted, max_tokens=180, verbose=False
         ).strip()
@@ -245,11 +309,12 @@ class RealtimeRAGPipeline:
 
         # Sources pour restitution
         sources = []
-        for rrf_s, clause, dense_s, sparse_s in top_candidates:
+        for rrf_s, clause, dense_s, sparse_s, rerank_s in top_candidates:
             sources.append({
                 "article": clause.article_num,
                 "title": clause.title,
                 "guarantee": clause.guarantee.value,
+                "rerank_score": round(rerank_s, 3),
                 "rrf_score": round(rrf_s, 4),
                 "dense_score": round(dense_s, 3),
                 "sparse_match": int(sparse_s),
