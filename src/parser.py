@@ -57,8 +57,24 @@ def parse_raw_contract_to_clauses(raw_text_path: str) -> List[ContractClause]:
             guarantee = GuaranteeType.DEGATS_DES_EAUX
         elif art_num.startswith("5."):
             guarantee = GuaranteeType.RESPONSABILITE_CIVILE
-        elif "extérieur" in title_clean.lower() or "jardin" in title_clean.lower():
+        elif art_num.startswith("6."):
+            guarantee = GuaranteeType.DISPOSITIONS_GENERALES
+        elif art_num.startswith("7."):
+            guarantee = GuaranteeType.EVENEMENTS_CLIMATIQUES
+        elif art_num.startswith("8."):
+            guarantee = GuaranteeType.CATASTROPHES_NATURELLES
+        elif art_num.startswith("9."):
+            guarantee = GuaranteeType.BRIS_DE_GLACES
+        elif art_num.startswith("10."):
+            guarantee = GuaranteeType.DOMMAGES_ELECTRIQUES
+        elif art_num.startswith("11."):
+            guarantee = GuaranteeType.ATTENTATS_ET_EMEUTES
+        elif art_num.startswith("12.") or art_num.startswith("15."):
+            guarantee = GuaranteeType.FRAIS_ANNEXES_ET_ASSISTANCE
+        elif art_num.startswith("16.") or "extérieur" in title_clean.lower() or "jardin" in title_clean.lower():
             guarantee = GuaranteeType.AMENAGEMENTS_EXTERIEURS
+        elif art_num.startswith("13.") or art_num.startswith("14.") or art_num.startswith("17."):
+            guarantee = GuaranteeType.DISPOSITIONS_GENERALES
 
         # Détermination du type de clause
         clause_type = ClauseType.INCLUSION

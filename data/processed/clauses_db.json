@@ -8,12 +8,12 @@
     "clause_type": "DEFINITION",
     "locations": [
       "local_collectif",
-      "garage",
       "local_velo",
-      "parties_communes",
-      "cave",
       "dependance",
-      "logement_privatif"
+      "logement_privatif",
+      "cave",
+      "parties_communes",
+      "garage"
     ],
     "mandatory_conditions": [
       "verrouillage_a_cle"
@@ -75,8 +75,8 @@
     "locations": [],
     "mandatory_conditions": [],
     "explicit_exclusions": [
-      "action_seule_chaleur_sans_flamme",
-      "fonte_degradation_par_source_chaleur_sans_incendie"
+      "fonte_degradation_par_source_chaleur_sans_incendie",
+      "action_seule_chaleur_sans_flamme"
     ],
     "raw_text": "Article 2.2 - Exclusions expresses relatives à la chaleur et au feu\nSont formellement exclus de la garantie Incendie :\na) Les dommages causés par la seule action de la chaleur, du rayonnement thermique, de la canicule ou du soleil, sans qu'il y ait eu combustion vive ou naissance d'un incendie caractérisé ;\nb) La détérioration, la fonte, la déformation ou le roussissement d'objets ou de meubles causés par leur exposition directe ou prolongée à une source de chaleur, à une bougie, à un fer à repasser, à un barbecue ou à un appareil de chauffage, dès lors que cet événement ne s'est pas accompagné d'un incendie propagé ;\nc) Les accidents de fumeurs (brûlures causées par des cigarettes, cigares ou pipes) n'ayant pas provoqué d'embrasement du bien ;\nd) Les brûlures et dégradations subies par les récipients et ustensiles de cuisson ainsi que les appareils de chauffage eux-mêmes par leur propre fonctionnement."
   },
@@ -104,12 +104,12 @@
     "guarantee": "VOL_ET_VANDALISME",
     "clause_type": "CONDITION_APPLICATION",
     "locations": [
-      "cave",
+      "jardin",
       "exterieur",
-      "garage",
-      "terrasse",
       "dependance",
-      "jardin"
+      "cave",
+      "terrasse",
+      "garage"
     ],
     "mandatory_conditions": [
       "effraction_caracterisee"
@@ -127,8 +127,8 @@
     "locations": [
       "terrasse",
       "jardin",
-      "logement_privatif",
-      "exterieur"
+      "exterieur",
+      "logement_privatif"
     ],
     "mandatory_conditions": [
       "verrouillage_a_cle"
@@ -151,9 +151,9 @@
       "local_collectif"
     ],
     "mandatory_conditions": [
-      "effraction_caracterisee",
+      "antivol_point_fixe",
       "verrouillage_a_cle",
-      "antivol_point_fixe"
+      "effraction_caracterisee"
     ],
     "explicit_exclusions": [
       "local_non_verrouille_ou_ouvert"
@@ -168,10 +168,10 @@
     "guarantee": "VOL_ET_VANDALISME",
     "clause_type": "INCLUSION",
     "locations": [
-      "logement_privatif",
       "local_velo",
       "parties_communes",
-      "local_collectif"
+      "local_collectif",
+      "logement_privatif"
     ],
     "mandatory_conditions": [],
     "explicit_exclusions": [
@@ -263,5 +263,331 @@
     "mandatory_conditions": [],
     "explicit_exclusions": [],
     "raw_text": "Article 6.2 - Déclarations incomplètes et cas d'incertitude contractuelle\nEn cas de circonstances indéterminées ou de silence partiel du contrat sur une modalité spécifique non stipulée expressément, la prise en charge fait l'objet d'un examen contradictoire par le gestionnaire. L'absence de justification matérielle d'une circonstance obligatoire (ex: fermeture à clé d'un local) vaut présomption de non-conformité aux exigences de garantie."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-7.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 7.1",
+    "title": "Dommages causés par l'action du vent et des tempêtes",
+    "guarantee": "EVENEMENTS_CLIMATIQUES",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "local_velo",
+      "parties_communes",
+      "local_collectif"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 7.1 - Dommages causés par l'action du vent et des tempêtes\nSont couverts les dommages matériels directs causés aux bâtiments assurés et à leur contenu par l'action directe du vent violent ou par le choc de corps renversés ou projetés par le vent, lorsque la vitesse du vent dépasse 100 km/h au moment du sinistre ou a détruit des édifices de bonne construction dans la commune."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-7.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 7.2",
+    "title": "Dommages causés par la grêle et le poids de la neige sur les toitures",
+    "guarantee": "EVENEMENTS_CLIMATIQUES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 7.2 - Dommages causés par la grêle et le poids de la neige sur les toitures\nSont garantis les dégâts matériels provoqués directement par l'impact des grêlons sur les toitures, façades et couvertures, ainsi que l'effondrement total ou partiel des toitures sous le poids accumulé de la neige ou de la glace."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-7.3",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 7.3",
+    "title": "Exclusions relatives aux événements climatiques",
+    "guarantee": "EVENEMENTS_CLIMATIQUES",
+    "clause_type": "EXCLUSION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "exterieur"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 7.3 - Exclusions relatives aux événements climatiques\nSont formellement exclus :\n- Les dommages causés aux stores extérieurs, auvents, toiles de tentes, volets restés non fermés ou non arrimés en période d'alerte météo ;\n- Le mobilier de jardin et les objets laissés en plein air sans abri fermé ;\n- Les infiltrations d'eau par des ouvertures restées ouvertes ou par défaut d'entretien des gouttières et chéneaux ;\n- Les dommages aux clôtures, haies et arbres du jardin."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-8.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 8.1",
+    "title": "Conditions d'ouverture de la garantie Catastrophes Naturelles",
+    "guarantee": "CATASTROPHES_NATURELLES",
+    "clause_type": "CONDITION_APPLICATION",
+    "locations": [
+      "local_velo",
+      "parties_communes",
+      "local_collectif"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 8.1 - Conditions d'ouverture de la garantie Catastrophes Naturelles\nLa garantie s'applique aux dommages matériels directs ayant eu pour cause déterminante l'intensité anormale d'un agent naturel (inondations, coulées de boue, mouvements de terrain, sécheresse géotechnique). La prise en charge est strictement subordonnée à la publication préalable au Journal Officiel d'un arrêté interministériel constatant l'état de catastrophe naturelle dans la commune du bien sinistré."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-8.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 8.2",
+    "title": "Franchises légales obligatoires et exclusions",
+    "guarantee": "CATASTROPHES_NATURELLES",
+    "clause_type": "EXCLUSION",
+    "locations": [
+      "logement_privatif"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 8.2 - Franchises légales obligatoires et exclusions\nLes indemnités sont versées sous déduction d'une franchise légale incompressible fixée par arrêté (notamment 380 € pour les biens à usage d'habitation et 1 520 € pour les dommages imputables à la sécheresse ou réhydratation des sols). Sont exclus les dommages indirects (perte de jouissance, loyers, frais de relogement) non expressément visés par l'arrêté."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-9.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 9.1",
+    "title": "Biens vitrés couverts",
+    "guarantee": "BRIS_DE_GLACES",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "exterieur"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 9.1 - Biens vitrés couverts\nSont couverts les bris accidentels des produits verriers et glaces faisant partie intégrante des bâtiments :\n- Les vitres, doubles vitrages et baies vitrées des fenêtres et portes extérieures ;\n- Les parois vitrées de vérandas et verrières fixes ;\n- Les parois rigides transparentes de douches et baignoires ;\n- Les miroirs scellés ou fixés aux murs des pièces principales."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-9.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 9.2",
+    "title": "Exclusions expresses bris de glaces",
+    "guarantee": "BRIS_DE_GLACES",
+    "clause_type": "EXCLUSION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "exterieur"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 9.2 - Exclusions expresses bris de glaces\nNe sont jamais garantis au titre du bris de glaces :\n- Les simples rayures, ébréchures, écaillements sans bris traversant ;\n- La vaisselle, verrerie de table, lustres et luminaires ;\n- Les écrans de téléviseurs, moniteurs informatiques, smartphones et tablettes numériques ;\n- Les serres de jardin et châssis mobiles extérieurs."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-10.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 10.1",
+    "title": "Dommages aux appareils électriques et électroniques",
+    "guarantee": "DOMMAGES_ELECTRIQUES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 10.1 - Dommages aux appareils électriques et électroniques\nSont garantis les dommages matériels accidentels subis par les appareils électroménagers et audiovisuels consécutifs à l'action soudaine et imprévisible de l'électricité (surtension sur le réseau, court-circuit interne, induction de la foudre)."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-10.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 10.2",
+    "title": "Exclusions dommages électriques",
+    "guarantee": "DOMMAGES_ELECTRIQUES",
+    "clause_type": "EXCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 10.2 - Exclusions dommages électriques\nSont exclus de la garantie :\n- Les appareils âgés de plus de 10 ans au jour du sinistre ;\n- Les lampes, tubes, fusibles, résistances et éléments chauffants d'usure normale ;\n- Les pannes d'origine mécanique ou logicielle indépendantes de tout phénomène électrique externe ;\n- Les pertes de données informatiques et les logiciels."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-11.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 11.1",
+    "title": "Prise en charge des dommages matériels directs d'attentat",
+    "guarantee": "ATTENTATS_ET_EMEUTES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 11.1 - Prise en charge des dommages matériels directs d'attentat\nConformément aux dispositions légales impératives, la garantie couvre la réparation des dommages matériels directs causés aux biens assurés par des attentats ou des actes de terrorisme commis sur le territoire national, ainsi que les actes de vandalisme consécutifs à des mouvements populaires ou émeutes."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-11.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 11.2",
+    "title": "Exclusions émeutes et rixes avec participation de l'assuré",
+    "guarantee": "ATTENTATS_ET_EMEUTES",
+    "clause_type": "EXCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 11.2 - Exclusions émeutes et rixes avec participation de l'assuré\nSont formellement exclus les dommages résultant d'actes commis avec la participation volontaire ou instigués directement par l'assuré ou les personnes vivant habituellement sous son toit."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-12.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 12.1",
+    "title": "Frais de déblais, de démolition et mesures conservatoires",
+    "guarantee": "FRAIS_ANNEXES_ET_ASSISTANCE",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 12.1 - Frais de déblais, de démolition et mesures conservatoires\nÀ la suite d'un sinistre garanti (incendie, explosion, dégât des eaux majeur), la compagnie prend en charge les frais de déblaiement, de transport des décombres et de démolition nécessaires pour reconstruire ou réparer les locaux, jusqu'à concurrence de 10 % du montant du dommage principal."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-12.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 12.2",
+    "title": "Frais de relogement d'urgence et perte d'usage temporaire",
+    "guarantee": "FRAIS_ANNEXES_ET_ASSISTANCE",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 12.2 - Frais de relogement d'urgence et perte d'usage temporaire\nLorsque les locaux d'habitation sont rendus totalement inhabitables à la suite d'un événement garanti, la compagnie rembourse les frais d'hébergement provisoire d'urgence de l'assuré (chambre d'hôtel ou location meublée) pour une durée maximale de 6 mois, dans la limite de 1 500 € par mois."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-13.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 13.1",
+    "title": "Définition de la valeur à neuf et rééquipement à neuf",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "DEFINITION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 13.1 - Définition de la valeur à neuf et rééquipement à neuf\nLorsque l'option \"Rééquipement à neuf\" est souscrite, le mobilier de moins de 5 ans détruit lors d'un sinistre garanti est remboursé à sa valeur d'achat équivalente au jour du sinistre, sans déduction de vétusté."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-13.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 13.2",
+    "title": "Coefficient de vétusté et dépréciation annuelle",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 13.2 - Coefficient de vétusté et dépréciation annuelle\nÀ défaut de clause de rééquipement à neuf ou pour les biens de plus de 5 ans, une vétusté forfaitaire de 10 % par an est appliquée sur le montant d'indemnisation du mobilier, plafonnée à un résiduel minimal de 20 % de la valeur neuve."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-14.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 14.1",
+    "title": "Application des franchises contractuelles",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 14.1 - Application des franchises contractuelles\nChaque sinistre donne lieu à l'application d'une franchise générale contractuelle de 150 € restant à la charge exclusive de l'assuré, sauf disposition légale impérative contraire (catastrophe naturelle)."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-14.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 14.2",
+    "title": "Prescription biennale",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 14.2 - Prescription biennale\nConformément à la réglementation des assurances, toutes actions dérivant du présent contrat d'assurance sont prescrites par deux ans à compter de l'événement qui y donne naissance."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-15.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 15.1",
+    "title": "Dépannage d'urgence serrurerie et plomberie (24h/24, 7j/7)",
+    "guarantee": "FRAIS_ANNEXES_ET_ASSISTANCE",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "logement_privatif"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 15.1 - Dépannage d'urgence serrurerie et plomberie (24h/24, 7j/7)\nEn cas de perte ou vol de clés, ou de fuite d'eau non maîtrisable rendant le logement insalubre ou inaccessible, l'assistance prend en charge le déplacement et la première heure de main-d'œuvre d'un dépanneur agréé, jusqu'à 300 € TTC par intervention. Les pièces de remplacement définitives restent à la charge de l'assuré."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-15.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 15.2",
+    "title": "Gardiennage provisoire et sécurisation des accès",
+    "guarantee": "FRAIS_ANNEXES_ET_ASSISTANCE",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 15.2 - Gardiennage provisoire et sécurisation des accès\nSi les accès du bâtiment ne peuvent pas être sécurisés immédiatement après un cambriolage ou un incendie, l'assistance met en place un service de gardiennage ou de vigile pour une durée maximale de 48 heures."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-16.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 16.1",
+    "title": "Mobilier de jardin et barbecues scellés",
+    "guarantee": "AMENAGEMENTS_EXTERIEURS",
+    "clause_type": "INCLUSION",
+    "locations": [
+      "terrasse",
+      "jardin",
+      "exterieur"
+    ],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 16.1 - Mobilier de jardin et barbecues scellés\nLes meubles de jardin, tables et barbecues fixes scellés dans le sol extérieur ne sont garantis contre les intempéries et le choc accidentel qu'en cas de souscription de l'option spécifique \"Aménagements Extérieurs\". En aucun cas la déformation par canicule ou le laisser-aller d'entretien ne sont pris en charge."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-16.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 16.2",
+    "title": "Piscines, spas et installations extérieures",
+    "guarantee": "AMENAGEMENTS_EXTERIEURS",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [
+      "local_non_verrouille_ou_ouvert"
+    ],
+    "raw_text": "Article 16.2 - Piscines, spas et installations extérieures\nLes piscines enterrées ou hors-sol rigides, bâches et équipements de filtration ne sont couverts que contre la foudre, la tempête et le choc de véhicule étranger si expressément désignés aux conditions particulières. Sont exclus les dégâts causés par le gel ou l'affaissement du terrain."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-16.3",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 16.3",
+    "title": "Véhicules non immatriculés et engins de déplacement personnel (EDPM)",
+    "guarantee": "AMENAGEMENTS_EXTERIEURS",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 16.3 - Véhicules non immatriculés et engins de déplacement personnel (EDPM)\nLes trottinettes électriques, hoverboards et vélos à assistance électrique (VAE > 25 km/h) doivent faire l'objet d'une assurance de responsabilité civile circulation obligatoire distincte. Ils sont exclus de la responsabilité civile vie privée du présent contrat."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-17.1",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 17.1",
+    "title": "Fausse déclaration intentionnelle (Nullité du contrat)",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 17.1 - Fausse déclaration intentionnelle (Nullité du contrat)\nToute réticence ou fausse déclaration intentionnelle de la part de l'assuré lors de la souscription ou de la déclaration d'un sinistre entraîne la nullité absolue du contrat et la déchéance de toute indemnité, les primes payées restant acquises à l'assureur."
+  },
+  {
+    "clause_id": "CG-HAB-2026-LU-17.2",
+    "contract_ref": "CG-HAB-2026-LU",
+    "article_num": "Article 17.2",
+    "title": "Omission ou déclaration inexacte non intentionnelle",
+    "guarantee": "DISPOSITIONS_GENERALES",
+    "clause_type": "INCLUSION",
+    "locations": [],
+    "mandatory_conditions": [],
+    "explicit_exclusions": [],
+    "raw_text": "Article 17.2 - Omission ou déclaration inexacte non intentionnelle\nSi la fausse déclaration ou l'omission n'est pas intentionnelle et constatée après le sinistre, l'indemnité est réduite en proportion du taux des primes payées par rapport au taux des primes qui auraient été dues (Règle proportionnelle de prime)."
   }
 ]

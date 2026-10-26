@@ -64,12 +64,12 @@ flowchart TD
 Cette section decrit strictement les briques developpees et actives dans le code de ce repository :
 
 ### 1. Ingestion et Parsing Structure au Niveau Clause
-- **Corpus contractuel :** Fichier brut de conditions generales habitation (`data/raw/conditions_generales_habitation.txt`) modelise d'apres les standards de l'assurance multirisque habitation (dispositions generales, vol, incendie, degats des eaux, responsabilite civile).
+- **Corpus contractuel :** Fichier brut de conditions generales habitation (`data/raw/conditions_generales_habitation.txt`) modelise d'apres les standards complets de l'assurance multirisque habitation (dispositions generales, vol, incendie, degats des eaux, responsabilite civile, tempete et grele, catastrophes naturelles, bris de glaces, dommages electriques, relogement, assistance d'urgence).
 - **Parsing relationnel (`src/parser.py`) :** Rejet du chunking arbitraire par blocs de texte. Chaque article est decoupe en unite atomique selon le modele Pydantic strict `ContractClause` (`src/schemas.py`), extrayant la reference d'article, la garantie, les lieux d'application, les conditions suspensives et les exclusions formelles.
 - **Enrichissement semantique avant embedding :** Chaque clause est projetee via un gabarit contextuel enrichi associant titre, garantie, conditions et exclusions au texte juridique.
 
 ### 2. Retrieval Hybride en Memoire et RRF
-- **Recherche Dense :** Encodage et normalisation des vecteurs ($L_2$ norm = 1.0) avec calcul direct par produit scalaire en memoire. Sur la taille du corpus de demonstration (16 clauses atomiques cles), la similarite s'execute en moins de 1 milliseconde sans perte de rappel.
+- **Recherche Dense :** Encodage et normalisation des vecteurs ($L_2$ norm = 1.0) avec calcul direct par produit scalaire en memoire. Sur la taille du corpus (40 clauses atomiques couvrant l'ensemble de la police MRH), la similarite s'execute en moins de 1 milliseconde sans perte de rappel.
 - **Recherche Sparse avec Stemming Francais :** Algorithme de reduction morphologique eliminant les mots vides et gerant les accords singulier/pluriel (*velo* / *velos*, *porte* / *portes*).
 - **Fusion RRF :** Combinaison des rangs dense et sparse selon la formule standard $k=60$ pour eviter la dilution des termes juridiques critiques.
 

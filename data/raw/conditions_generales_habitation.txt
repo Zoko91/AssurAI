@@ -101,3 +101,135 @@ L'assuré doit déclarer tout sinistre dans un délai maximal de 5 jours ouvrés
 
 Article 6.2 - Déclarations incomplètes et cas d'incertitude contractuelle
 En cas de circonstances indéterminées ou de silence partiel du contrat sur une modalité spécifique non stipulée expressément, la prise en charge fait l'objet d'un examen contradictoire par le gestionnaire. L'absence de justification matérielle d'une circonstance obligatoire (ex: fermeture à clé d'un local) vaut présomption de non-conformité aux exigences de garantie.
+
+
+================================================================================
+CHAPITRE 7 - GARANTIE ÉVÉNEMENTS CLIMATIQUES (TEMPÊTE, GRÊLE, NEIGE)
+
+Article 7.1 - Dommages causés par l'action du vent et des tempêtes
+Sont couverts les dommages matériels directs causés aux bâtiments assurés et à leur contenu par l'action directe du vent violent ou par le choc de corps renversés ou projetés par le vent, lorsque la vitesse du vent dépasse 100 km/h au moment du sinistre ou a détruit des édifices de bonne construction dans la commune.
+
+Article 7.2 - Dommages causés par la grêle et le poids de la neige sur les toitures
+Sont garantis les dégâts matériels provoqués directement par l'impact des grêlons sur les toitures, façades et couvertures, ainsi que l'effondrement total ou partiel des toitures sous le poids accumulé de la neige ou de la glace.
+
+Article 7.3 - Exclusions relatives aux événements climatiques
+Sont formellement exclus :
+- Les dommages causés aux stores extérieurs, auvents, toiles de tentes, volets restés non fermés ou non arrimés en période d'alerte météo ;
+- Le mobilier de jardin et les objets laissés en plein air sans abri fermé ;
+- Les infiltrations d'eau par des ouvertures restées ouvertes ou par défaut d'entretien des gouttières et chéneaux ;
+- Les dommages aux clôtures, haies et arbres du jardin.
+
+
+================================================================================
+CHAPITRE 8 - CATASTROPHES NATURELLES & TECHNOLOGIQUES
+
+Article 8.1 - Conditions d'ouverture de la garantie Catastrophes Naturelles
+La garantie s'applique aux dommages matériels directs ayant eu pour cause déterminante l'intensité anormale d'un agent naturel (inondations, coulées de boue, mouvements de terrain, sécheresse géotechnique). La prise en charge est strictement subordonnée à la publication préalable au Journal Officiel d'un arrêté interministériel constatant l'état de catastrophe naturelle dans la commune du bien sinistré.
+
+Article 8.2 - Franchises légales obligatoires et exclusions
+Les indemnités sont versées sous déduction d'une franchise légale incompressible fixée par arrêté (notamment 380 € pour les biens à usage d'habitation et 1 520 € pour les dommages imputables à la sécheresse ou réhydratation des sols). Sont exclus les dommages indirects (perte de jouissance, loyers, frais de relogement) non expressément visés par l'arrêté.
+
+
+================================================================================
+CHAPITRE 9 - GARANTIE BRIS DE GLACES
+
+Article 9.1 - Biens vitrés couverts
+Sont couverts les bris accidentels des produits verriers et glaces faisant partie intégrante des bâtiments :
+- Les vitres, doubles vitrages et baies vitrées des fenêtres et portes extérieures ;
+- Les parois vitrées de vérandas et verrières fixes ;
+- Les parois rigides transparentes de douches et baignoires ;
+- Les miroirs scellés ou fixés aux murs des pièces principales.
+
+Article 9.2 - Exclusions expresses bris de glaces
+Ne sont jamais garantis au titre du bris de glaces :
+- Les simples rayures, ébréchures, écaillements sans bris traversant ;
+- La vaisselle, verrerie de table, lustres et luminaires ;
+- Les écrans de téléviseurs, moniteurs informatiques, smartphones et tablettes numériques ;
+- Les serres de jardin et châssis mobiles extérieurs.
+
+
+================================================================================
+CHAPITRE 10 - DOMMAGES ÉLECTRIQUES
+
+Article 10.1 - Dommages aux appareils électriques et électroniques
+Sont garantis les dommages matériels accidentels subis par les appareils électroménagers et audiovisuels consécutifs à l'action soudaine et imprévisible de l'électricité (surtension sur le réseau, court-circuit interne, induction de la foudre).
+
+Article 10.2 - Exclusions dommages électriques
+Sont exclus de la garantie :
+- Les appareils âgés de plus de 10 ans au jour du sinistre ;
+- Les lampes, tubes, fusibles, résistances et éléments chauffants d'usure normale ;
+- Les pannes d'origine mécanique ou logicielle indépendantes de tout phénomène électrique externe ;
+- Les pertes de données informatiques et les logiciels.
+
+
+================================================================================
+CHAPITRE 11 - ATTENTATS, ÉMEUTES & ACTES DE TERRORISME
+
+Article 11.1 - Prise en charge des dommages matériels directs d'attentat
+Conformément aux dispositions légales impératives, la garantie couvre la réparation des dommages matériels directs causés aux biens assurés par des attentats ou des actes de terrorisme commis sur le territoire national, ainsi que les actes de vandalisme consécutifs à des mouvements populaires ou émeutes.
+
+Article 11.2 - Exclusions émeutes et rixes avec participation de l'assuré
+Sont formellement exclus les dommages résultant d'actes commis avec la participation volontaire ou instigués directement par l'assuré ou les personnes vivant habituellement sous son toit.
+
+
+================================================================================
+CHAPITRE 12 - FRAIS ANNEXES & FRAIS DE SAUVETAGE
+
+Article 12.1 - Frais de déblais, de démolition et mesures conservatoires
+À la suite d'un sinistre garanti (incendie, explosion, dégât des eaux majeur), la compagnie prend en charge les frais de déblaiement, de transport des décombres et de démolition nécessaires pour reconstruire ou réparer les locaux, jusqu'à concurrence de 10 % du montant du dommage principal.
+
+Article 12.2 - Frais de relogement d'urgence et perte d'usage temporaire
+Lorsque les locaux d'habitation sont rendus totalement inhabitables à la suite d'un événement garanti, la compagnie rembourse les frais d'hébergement provisoire d'urgence de l'assuré (chambre d'hôtel ou location meublée) pour une durée maximale de 6 mois, dans la limite de 1 500 € par mois.
+
+
+================================================================================
+CHAPITRE 13 - MODALITÉS D'INDEMNISATION ET VÉTUSTÉ
+
+Article 13.1 - Définition de la valeur à neuf et rééquipement à neuf
+Lorsque l'option "Rééquipement à neuf" est souscrite, le mobilier de moins de 5 ans détruit lors d'un sinistre garanti est remboursé à sa valeur d'achat équivalente au jour du sinistre, sans déduction de vétusté.
+
+Article 13.2 - Coefficient de vétusté et dépréciation annuelle
+À défaut de clause de rééquipement à neuf ou pour les biens de plus de 5 ans, une vétusté forfaitaire de 10 % par an est appliquée sur le montant d'indemnisation du mobilier, plafonnée à un résiduel minimal de 20 % de la valeur neuve.
+
+
+================================================================================
+CHAPITRE 14 - FRANCHISES, PLAFONDS & PRESCRIPTION
+
+Article 14.1 - Application des franchises contractuelles
+Chaque sinistre donne lieu à l'application d'une franchise générale contractuelle de 150 € restant à la charge exclusive de l'assuré, sauf disposition légale impérative contraire (catastrophe naturelle).
+
+Article 14.2 - Prescription biennale
+Conformément à la réglementation des assurances, toutes actions dérivant du présent contrat d'assurance sont prescrites par deux ans à compter de l'événement qui y donne naissance.
+
+
+================================================================================
+CHAPITRE 15 - ASSISTANCE D'URGENCE À DOMICILE
+
+Article 15.1 - Dépannage d'urgence serrurerie et plomberie (24h/24, 7j/7)
+En cas de perte ou vol de clés, ou de fuite d'eau non maîtrisable rendant le logement insalubre ou inaccessible, l'assistance prend en charge le déplacement et la première heure de main-d'œuvre d'un dépanneur agréé, jusqu'à 300 € TTC par intervention. Les pièces de remplacement définitives restent à la charge de l'assuré.
+
+Article 15.2 - Gardiennage provisoire et sécurisation des accès
+Si les accès du bâtiment ne peuvent pas être sécurisés immédiatement après un cambriolage ou un incendie, l'assistance met en place un service de gardiennage ou de vigile pour une durée maximale de 48 heures.
+
+
+================================================================================
+CHAPITRE 16 - GARANTIES ANNEXES DE PLEIN AIR & MOBILITÉ
+
+Article 16.1 - Mobilier de jardin et barbecues scellés
+Les meubles de jardin, tables et barbecues fixes scellés dans le sol extérieur ne sont garantis contre les intempéries et le choc accidentel qu'en cas de souscription de l'option spécifique "Aménagements Extérieurs". En aucun cas la déformation par canicule ou le laisser-aller d'entretien ne sont pris en charge.
+
+Article 16.2 - Piscines, spas et installations extérieures
+Les piscines enterrées ou hors-sol rigides, bâches et équipements de filtration ne sont couverts que contre la foudre, la tempête et le choc de véhicule étranger si expressément désignés aux conditions particulières. Sont exclus les dégâts causés par le gel ou l'affaissement du terrain.
+
+Article 16.3 - Véhicules non immatriculés et engins de déplacement personnel (EDPM)
+Les trottinettes électriques, hoverboards et vélos à assistance électrique (VAE > 25 km/h) doivent faire l'objet d'une assurance de responsabilité civile circulation obligatoire distincte. Ils sont exclus de la responsabilité civile vie privée du présent contrat.
+
+
+================================================================================
+CHAPITRE 17 - OBLIGATIONS ET SANCTIONS CONTRACTUELLES
+
+Article 17.1 - Fausse déclaration intentionnelle (Nullité du contrat)
+Toute réticence ou fausse déclaration intentionnelle de la part de l'assuré lors de la souscription ou de la déclaration d'un sinistre entraîne la nullité absolue du contrat et la déchéance de toute indemnité, les primes payées restant acquises à l'assureur.
+
+Article 17.2 - Omission ou déclaration inexacte non intentionnelle
+Si la fausse déclaration ou l'omission n'est pas intentionnelle et constatée après le sinistre, l'indemnité est réduite en proportion du taux des primes payées par rapport au taux des primes qui auraient été dues (Règle proportionnelle de prime).
